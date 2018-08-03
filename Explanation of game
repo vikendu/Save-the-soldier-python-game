@@ -1,0 +1,40 @@
+Task
+Your​ ​ task​ ​ is​ ​ to​ ​ model​ ​ this​ ​ scenario.​ ​ Your​ ​ input​ ​ will​ ​ be​ ​ a ​ ​ string​ ​ consisting
+of​ ​ characters​ ​ from​ ​ ​ {‘U’,’D’,’0’,’1’,’2’}.​ ​ You​ ​ need​ ​ to​ ​ parse​ ​ the​ ​ given​ ​ string
+and​ ​ output​ ​ the​ ​ state​ ​ of​ ​ the​ ​ system​ ​ at​ ​ the​ ​ end​ ​ which​ ​ consists​ ​ of​ ​ -
+a) The​ ​ Floor​ ​ in​ ​ which​ ​ the​ ​ current​ ​ soldier​ ​ is​ ​ on.
+b) Total​ ​ Ammo​ ​ Consumed​ ​ (by​ ​ all​ ​ soldiers​ ​ combined)
+c) Total​ ​ no.​ ​ of​ ​ foes​ ​ eliminated
+d) Total​ ​ no.​ ​ of​ ​ soldiers​ ​ dead
+Sample​ ​ Test​ ​ Case:
+Input​ ​ :
+011012D2U0
+Output:
+Current ​ ​ Floor ​ ​ ​ - ​ ​ 6
+Ammo ​ ​ Consumed ​ ​ - ​ ​ 11
+Foes ​ ​ Eliminated ​ ​ - ​ ​ ​ 3
+Soldiers ​ ​ Dead ​ ​ - ​ ​ ​ 0
+Explanation:
+The​ ​ soldier​ ​ is​ ​ initially​ ​ at​ ​ Floor​ ​ 0 ​ ​ and​ ​ moving​ ​ up.
+0​​ ​ - ​ ​ Soldier​ ​ encounters​ ​ 0 ​ ​ foes​ ​ so​ ​ he​ ​ move​ ​ up​ ​ one​ ​ floor.​ ​ Now​ ​ he​ ​ is​ ​ at​ ​ floor
+1.
+1​ ​ - ​ ​ Soldier​ ​ encounters​ ​ 1 ​ ​ foe​ ​ at​ ​ floor​ ​ 1.​ ​ As​ ​ it​ ​ is​ ​ an​ ​ empty​ ​ floor​ ​ he​ ​ uses​ ​ 3
+bullets​ ​ to​ ​ kill​ ​ the​ ​ foe​ ​ and​ ​ moves​ ​ up​ ​ to​ ​ floor​ ​ 2.
+1​​ ​ - ​ ​ Soldier​ ​ encounters​ ​ 1 ​ ​ foe​ ​ at​ ​ floor​ ​ 2.​ ​ As​ ​ it​ ​ is​ ​ an​ ​ empty​ ​ floor​ ​ he​ ​ uses​ ​ 3
+bullets​ ​ to​ ​ kill​ ​ the​ ​ foe​ ​ and​ ​ moves​ ​ up​ ​ to​ ​ floor​ ​ 3.​ ​ Total​ ​ ammo​ ​ consumed​ ​ is​ ​ 6.
+0​​ ​ - ​ ​ Soldier​ ​ encounters​ ​ 0 ​ ​ foes​ ​ so​ ​ he​ ​ move​ ​ up​ ​ one​ ​ floor.​ ​ Now​ ​ he​ ​ is​ ​ at​ ​ floor
+4.
+1​ ​ - ​ ​ Soldier​ ​ encounter​ ​ 1 ​ ​ foe​ ​ at​ ​ floor​ ​ 4.​ ​ As​ ​ it​ ​ is​ ​ a ​ ​ normal​ ​ floor​ ​ you​ ​ use​ ​ 5
+bullets​ ​ to​ ​ kill​ ​ the​ ​ foe​ ​ and​ ​ move​ ​ up​ ​ to​ ​ floor​ ​ 5.​ ​ Total​ ​ ammo​ ​ consumed​ ​ is​ ​ 11
+and​ ​ total​ ​ enemies​ ​ killed​ ​ is​ ​ 3.​ ​ Now​ ​ he​ ​ is​ ​ at​ ​ floor​ ​ 5.2​​ ​ - ​ ​ He​ ​ encounters​ ​ two​ ​ foes​ ​ and​ ​ so​ ​ he​ ​ flees​ ​ one​ ​ floor​ ​ down​ ​ to​ ​ Floor​ ​ 4.
+Now​ ​ he​ ​ will​ ​ start​ ​ moving​ ​ downwards.
+D​​ ​ - ​ ​ ​ This​ ​ command​ ​ has​ ​ no​ ​ effect​ ​ as​ ​ the​ ​ Soldier​ ​ was​ ​ anyways​ ​ moving
+downwards.​ ​ He​ ​ moves​ ​ one​ ​ floor​ ​ down​ ​ to​ ​ Floor​ ​ 3.
+2​​ ​ - ​ ​ He​ ​ encounters​ ​ two​ ​ foes​ ​ and​ ​ so​ ​ he​ ​ flees​ ​ one​ ​ floor​ ​ up​ ​ to​ ​ Floor​ ​ 4.​ ​ Now
+he​ ​ will​ ​ start​ ​ moving​ ​ upwards.
+U​​ ​ - ​ ​ ​ This​ ​ command​ ​ has​ ​ no​ ​ effect​ ​ as​ ​ the​ ​ Soldier​ ​ was​ ​ anyways​ ​ moving
+upwards.​ ​ He​ ​ moves​ ​ one​ ​ floor​ ​ up​ ​ to​ ​ Floor​ ​ 5.
+0​​ ​ - ​ ​ Soldier​ ​ encounters​ ​ 0 ​ ​ foes​ ​ so​ ​ he​ ​ move​ ​ up​ ​ one​ ​ floor.​ ​ Now​ ​ he​ ​ is​ ​ at​ ​ floor
+6.
+So​ ​ at​ ​ the​ ​ end,​ ​ the​ ​ soldier​ ​ is​ ​ on​ ​ the​ ​ 6th​ ​ floor,​ ​ used​ ​ 11​ ​ bullets,​ ​ eliminated​ ​ 3
+foes​ ​ and​ ​ 0 ​ ​ other​ ​ soldiers​ ​ were​ ​ dead.
