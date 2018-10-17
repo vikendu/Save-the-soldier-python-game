@@ -1,4 +1,4 @@
-class humanoid(object):
+class soldier(object):
 	
 	
 	def input_():
